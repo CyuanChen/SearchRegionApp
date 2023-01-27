@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         navigationItem.title = "Select region"
         navigationItem.searchController = searchController
         navigationController?.hidesBarsWhenKeyboardAppears = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: nil)
+        navigationItem.leftBarButtonItem?.tintColor = .systemGreen
+        navigationItem.rightBarButtonItem?.tintColor = .systemGreen
     }
     
     private func setupTableView() {
